@@ -6,64 +6,85 @@ cells: [
   {
     row: 0,
     col: 0,
-    isMine: 0,
-    hidden: true
+    isMine: false,
+    isMarked:false,
+    hidden: true,
+    surroundingMines: 0
 },
 {
   row: 0,
   col: 1,
-  isMine: 0,
-  hidden: true
+  isMine: false,
+  isMarked:false,
+  hidden: true,
+  surroundingMines: 0
 },
 {
   row: 0,
   col: 2,
-  isMine: 0,
-  hidden: true
+  isMine: false,
+  isMarked:false,
+  hidden: true,
+  surroundingMines: 0
 },
 {
   row: 1,
   col: 0,
-  isMine: 0,
-  hidden: true
+  isMine: false,
+  isMarked:false,
+  hidden: true,
+  surroundingMines: 0
 },
 {
   row: 1,
   col: 1,
-  isMine: 0,
-  hidden: true
+  isMine: false,
+  isMarked:false,
+  hidden: true,
+  surroundingMines: 0
 },
 {
   row: 1,
   col: 2,
-  isMine: 0,
-  hidden: true
+  isMine: false,
+  isMarked:false,
+  hidden: true,
+  surroundingMines: 0
 },
 {
   row: 2,
   col: 0,
-  isMine: 0,
-  hidden: true
+  isMine: false,
+  isMarked:false,
+  hidden: true,
+  surroundingMines: 0
 },
 {
   row: 2,
   col: 1,
-  isMine: 0,
-  hidden: true
+  isMine: false,
+  isMarked:false,
+  hidden: true,
+  surroundingMines: 0
 },
 {
   row: 2,
   col: 2,
-  isMine: 0,
-  hidden: true
+  isMine: false,
+  isMarked:false,
+  hidden: true,
+  surroundingMines: 0
 }]
 }
 
 function startGame () {
   // Don't remove this function call: it makes the game work!
+  surroundingMines = []
+  for (i = 0;i < board.cells.length;i++){
+  surroundingMines[i] = countSurroundingMines(board.cells[i])
+}
   lib.initBoard()
 }
-
 // Define this function to look for a win condition:
 //
 // 1. Are all of the cells that are NOT mines visible?
