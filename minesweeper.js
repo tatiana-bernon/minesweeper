@@ -1,7 +1,30 @@
 document.addEventListener('DOMContentLoaded', startGame)
+function cell( row, col, isMine, isMarked , hidden)
+{
+  return {
+    row: row,
+    col: col,
+    isMine: isMine,
+    isMarked: isMarked,
+    hidden: hidden
+  }
+
+}
+
+// automatically generate the board!
+function board () {
+  
+}
+//write a function to create board object
+// the board object must have row, col, isMine, isMarked, and hidden properties.
+//start by simply setting every isMine to true
+//later have a random number of mines scattered throughout the board.
+
+
+
 
 // Define your `board` object here!
-var board = {
+/*var board = {
 cells: [
   {
     row: 0,
@@ -30,7 +53,7 @@ cells: [
 {
   row: 1,
   col: 0,
-  isMine: false,
+  isMine: true,
   isMarked:false,
   hidden: true,
   surroundingMines: 0
@@ -46,7 +69,7 @@ cells: [
 {
   row: 1,
   col: 2,
-  isMine: false,
+  isMine: true,
   isMarked:false,
   hidden: true,
   surroundingMines: 0
@@ -70,12 +93,12 @@ cells: [
 {
   row: 2,
   col: 2,
-  isMine: false,
+  isMine: true,
   isMarked:false,
   hidden: true,
   surroundingMines: 0
 }]
-}
+}*/
 
 function startGame () {
   // Don't remove this function call: it makes the game work!
@@ -85,15 +108,30 @@ function startGame () {
   lib.initBoard()
 }
 // Define this function to look for a win condition:
-//
+document.addEventListener("click", checkForWin);
+document.addEventListener("contextmenu", checkForWin);
 // 1. Are all of the cells that are NOT mines visible?
 // 2. Are all of the mines marked?
 function checkForWin () {
   
+  var youWon = true;
+  
+  for (i = 0; i < board.cells.length; i++){
+  var cell = board.cells[i]
+  
+    if (cell.isMine && !cell.isMarked) {
+    youWon = false
+    }
+  }
+  if (youWon) {
+    lib.displayMessage('You win!')
+  }
+}
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
   //   lib.displayMessage('You win!')
-}
+  
+
 // Define this function to count the number of mines around the cell
 // (there could be as many as 8). You don't have to get the surrounding
 // cells yourself! Just use `lib.getSurroundingCells`: 
