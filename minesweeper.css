@@ -4,6 +4,8 @@ html, body {
 }
 
 body {
+  background: no-repeat center/100% url("images/minesweeper\ background.jpg");
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: flex-center;
@@ -17,7 +19,10 @@ body {
 }
 
 #message {
-  font-size: 1.5rem;
+  font-size: 4.0rem;
+  color: white;
+  text-shadow: 4px 4px purple;
+
 }
 
 .board {
@@ -26,13 +31,13 @@ body {
 }
 
 .board div {
-  color: green;
+  color: rgb(255, 140, 0);
   font-size: 2rem;
   width: 75px;
   height: 75px;
-  border: 1px #ccc dotted;
+  border: 1px purple dotted;
   border-radius: 10%;
-  background-color: white;
+  background-color: yellow;
   margin: 3px;
   display: flex;
   align-items: center;
@@ -44,17 +49,17 @@ body {
 }
 
 div.mine, div.mine:hover {
-  background: no-repeat center/60% url("images/bomb.svg") crimson;
+  background: no-repeat center/60% url("images/clipart1637719.png") darkblue;
 }
 
 div.hidden {
-  background: #eee;
+  background: #0099ff ;
 }
 
 div.hidden:hover {
-  background: #ccc;
+  background: rgb(64, 236, 16);
 }
 
 div.marked, div.marked:hover {
-  background: no-repeat center/60% url("images/mark.svg") deepskyblue;
+  background: no-repeat center/60% url("images/Nyan\ Cat.ico") #003466;
 }

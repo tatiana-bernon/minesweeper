@@ -1,30 +1,38 @@
 document.addEventListener('DOMContentLoaded', startGame)
-function cell( row, col, isMine, isMarked , hidden)
-{
-  return {
-    row: row,
-    col: col,
-    isMine: isMine,
-    isMarked: isMarked,
-    hidden: hidden
-  }
-
-}
-
-// automatically generate the board!
-function board () {
-  
-}
+/*// automatically generate the board!
 //write a function to create board object
-// the board object must have row, col, isMine, isMarked, and hidden properties.
-//start by simply setting every isMine to true
-//later have a random number of mines scattered throughout the board.
+function createBoard () {
+ // the board object must have row, col, isMine, isMarked, and hidden properties.
+    var board = {
+    cells: [
+      {
+        row: row,
+        col: col,
+        //start by simply setting every isMine to true
+        isMine: true,
+        isMarked:false,
+        hidden: true,
+        surroundingMines: 0
+      },
+
+for (var i=0; i<10; i++) {
+  row = grid.insertRow(i);
+
+  for (var j=0; j<10; j++) {
+    cell = row.insertCell(j);
+
+    return board;
+
+
+
+
+//later have a random number of mines scattered throughout the board.*/
 
 
 
 
 // Define your `board` object here!
-/*var board = {
+var board = {
 cells: [
   {
     row: 0,
@@ -98,7 +106,7 @@ cells: [
   hidden: true,
   surroundingMines: 0
 }]
-}*/
+}
 
 function startGame () {
   // Don't remove this function call: it makes the game work!
