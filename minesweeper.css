@@ -12,6 +12,22 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 2.0rem;
+  color: white;
+  text-shadow: 6px 6px purple;
+}
+
 #message, #notes {
   display: flex;
   flex-direction: column;
@@ -19,7 +35,7 @@ body {
 }
 
 #message {
-  font-size: 4.0rem;
+  font-size: 2.0rem;
   color: white;
   text-shadow: 4px 4px purple;
 
@@ -49,7 +65,7 @@ body {
 }
 
 div.mine, div.mine:hover {
-  background: no-repeat center/60% url("images/clipart1637719.png") darkblue;
+  background: no-repeat center/60% url("images/Tacnayn.gif") red;
 }
 
 div.hidden {
@@ -61,5 +77,5 @@ div.hidden:hover {
 }
 
 div.marked, div.marked:hover {
-  background: no-repeat center/60% url("images/Nyan\ Cat.ico") #003466;
+  background: no-repeat center/60% url("images/b7a.gif") #003466;
 }
