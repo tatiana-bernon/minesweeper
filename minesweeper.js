@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
-function audio() {
-  var audio = document.getElementById("gameover")
-  audio.play()
+//Function to play sounds
+function playAudio(id){
+  document.getElementById(id).play();
 }
+
+
 
 document.addEventListener("click", checkForWin);
 document.addEventListener("contextmenu", checkForWin);
@@ -49,8 +51,8 @@ function checkForWin() {
     var cell = board.cells[i]
 
     if (cell.isMine && !cell.isMarked) {
-      youWon = false
-      return audio()
+      youWon = false;
+      playAudio('win')
     }
   }
   if (youWon) {
